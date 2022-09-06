@@ -51,7 +51,7 @@ pub struct Deserializer<'a, 'j, C: Context<'j> + 'a> {
 
 #[doc(hidden)]
 impl<'a, 'j, C: Context<'j>> Deserializer<'a, 'j, C> {
-    fn new(cx: &'a mut C, input: Handle<'j, JsValue>) -> Self {
+    pub fn new(cx: &'a mut C, input: Handle<'j, JsValue>) -> Self {
         Deserializer { cx, input }
     }
 }
